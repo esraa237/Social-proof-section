@@ -1,0 +1,209 @@
+/*global rules*/
+:root{
+    --Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish: hsl(303, 10%, 53%);
+    --Light-Grayish: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+    --font-family: 'League Spartan', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    background-color: var(--White);
+    background-image: url(/images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+ body::after{
+    content: url(/images/bg-pattern-bottom-desktop.svg);
+    position: absolute;
+    bottom: 0;
+    right:0;
+  }
+  @media (max-width: 767px) {
+    body{
+    background-image: url(/images/bg-pattern-top-mobile.svg);
+  }
+  body::after{
+    content: '';
+  }
+}
+.container{
+    padding:6rem 1.6rem;
+    margin-left: auto;
+    margin-right: auto;  
+}
+/*Small*/
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+  @media(max-width: 992px) {
+    .flex-center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    }
+/*global rules*/
+.container .content{
+    display: flex;
+    gap:10px;
+}
+/*heading*/
+.container .heading{
+   width:50%;
+}
+@media(max-width:992px){
+    .container .heading{  
+        width:100%;
+        text-align: center;
+    }
+}
+.container .heading h1{
+    font-size: 2.5rem;
+    max-width: 311px;
+    color: var(--Dark-Magenta);
+}
+.container .heading p{
+    margin-top:20px;
+    max-width:420px;
+    margin-bottom: 1rem;
+    color:var(--Dark-Grayish);
+    line-height: 1.4;
+    font-size: 18px;
+}
+@media (max-width: 992px) {
+    .container .heading p{
+        max-width:none;
+    }
+}
+/*heading*/
+/*rate*/
+.container .rate {
+    width:40%;
+}
+@media (max-width: 992px) {
+    .container .rate {
+        width:100%;
+    }
+}
+.container .rate .card{
+    background-color: var(--Light-Grayish);
+    display: flex;
+    padding:20px 25px;
+    margin:15px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .rate .card2{
+    position: relative;
+    left:50px;
+}
+.container .rate .card3{
+    position: relative;
+    left:100px;
+}
+.container .rate .card .stars img{
+    margin:0 2.5px;
+}
+.container .rate .text p{
+    font-size: 17px;
+    color:var(--Dark-Magenta);
+    font-weight: bold;
+    margin-left:20px;
+
+}
+@media (max-width: 992px) {
+    .container .rate .card{
+        left:0;
+    }  
+    .container .rate .text p{
+        margin-top:10px;
+    }
+}
+/*rate*/
+/*boxs*/
+.container .boxes{
+    margin-top: 4rem;
+    display: flex;
+    gap:20px;
+}
+@media (max-width: 992px) {
+    .container .boxes{
+        flex-direction: column;
+        margin-top: 1.5rem;
+        gap:5px;
+    }
+}
+.container .boxes .box{
+    padding: 40px 30px;
+    background-color: var(--Dark-Magenta);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .boxes .box2{
+    position: relative;
+    top:20px;
+}
+.container .boxes .box3{
+    position: relative;
+    top:40px;
+}
+.container .boxes .box .image{
+    display: flex;
+}
+.container .boxes .box img{
+    width:50px;
+    margin-right: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.container .boxes .image h3:first-of-type{
+    margin: 10px 0;
+    color:var(--White);
+    font-size: 20px;
+}
+.container .boxes .image h3:last-of-type{
+    color:var(--Soft-Pink);
+    font-weight:lighter;
+    font-size: 20px;
+}
+.container .boxes .box-text{
+    margin-top: 20px;
+    line-height: 1.6;
+    color:var(--White);
+    font-size: 16px;
+}
+/*boxs*/
