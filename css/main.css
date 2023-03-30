@@ -17,19 +17,19 @@ html{
 body{
     font-family: var(--font-family);
     background-color: var(--White);
-    background-image: url(/images/bg-pattern-top-desktop.svg);
+    background-image: url(./images/bg-pattern-top-desktop.svg);
     background-repeat: no-repeat;
     position: relative;
 }
  body::after{
-    content: url(/images/bg-pattern-bottom-desktop.svg);
+    content: url(./images/bg-pattern-bottom-desktop.svg);
     position: absolute;
     bottom: 0;
     right:0;
   }
   @media (max-width: 767px) {
     body{
-    background-image: url(/images/bg-pattern-top-mobile.svg);
+    background-image: url(./images/bg-pattern-top-mobile.svg);
   }
   body::after{
     content: '';
